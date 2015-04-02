@@ -269,8 +269,15 @@ xgallery
   display: inline-block;
 }
 .cd-gallery img {
+
+    width:  200px;
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+
   display: block;
-  width: 100%;
+  /*width: 100%;*/
 }
 .cd-gallery .cd-fail-message {
   display: none;
@@ -349,9 +356,11 @@ xfilter
   left: 0;
   height: 50px;
   width: 100%;
-  background-color: #B2B2B2@media only screen and (min-width: 1170px)
-.no-to@media only screen and (min-width: 1170px)
-.no-to;
+  background-color: #B2B2B2
+  ;
+  /*@media only screen and (min-width: 1170px)
+  .no-to@media only screen and (min-width: 1170px)
+  .no-to;*/
   z-index: 2;
 }
 .cd-filter form {
@@ -364,7 +373,7 @@ xfilter
   height: 50px;
   line-height: 50px;
   width: 60px;
-  color: #ffffff;
+  color: #FF3300;
   font-size: 1.3rem;
   text-align: center;
   background: #FEECE6;
@@ -463,7 +472,7 @@ xcustom form elements
   cursor: pointer;
 }
 .no-touch .cd-filter-block h4:hover {
-  color: #41307c;
+  color: #FF9A80;
 }
 .cd-filter-block h4::before {
   /* arrow */
