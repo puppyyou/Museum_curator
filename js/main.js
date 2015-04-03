@@ -70,7 +70,7 @@ jQuery(document).ready(function($){
 	*************************************/
 
 	buttonFilter.init();
-	$('.cd-gallery ul').mixItUp({
+	$('.cd-gallery').mixItUp({
 	    controls: {
 	    	enable: false
 	    },
@@ -84,8 +84,11 @@ jQuery(document).ready(function($){
 	    }
 	});
 
+/*--------------------------------------------------------------------------------*/
 	//search filtering
 	//credits http://codepen.io/edprats/pen/pzAdg
+/*--------------------------------------------------------------------------------*/
+
 	var inputText;
 	var $matching = $();
 

@@ -253,6 +253,12 @@ xtab-filter
 xgallery 
 
 -------------------------------- */
+/* -----------Button-------------*/
+.hidden {
+      /*hidden the icon at the first place */
+      display: none;
+    }
+
 .cd-gallery {
   padding: 26px 5%;
   width: 100%;
@@ -275,9 +281,13 @@ xgallery
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
+    display: block;
+    
+ /*   For the selecting boxes*/
+    
+    float: left;
+    margin: 15px;
 
-  display: block;
-  /*width: 100%;*/
 }
 .cd-gallery .cd-fail-message {
   display: none;
@@ -316,7 +326,9 @@ xgallery
     width: 80%;
   }
 }
-
+  .Good_1{
+    float: right;
+}
 /* -------------------------------- 
 
 xfilter 

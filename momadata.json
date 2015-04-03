@@ -1,0 +1,82 @@
+[
+    {
+        "Artist": "Zach Lieberman,James Powderly, Evan Roth, Chris Sugrue , TEMPT1 , Theo Watson ",
+        "Floor": "2F",
+        "Department": "Architecture and Design",
+        "Name": "EyeWriter",
+        "Img": "http://www.moma.org/collection_images/resized/823/w500h420/CRI_206823.jpg",
+        "MoMA Number": 777.2011
+    },
+    {
+        "Artist": "Stefan Sagmeister ",
+        "Floor": "Not on View",
+        "Department": "Architecture and Design",
+        "Name": "Casa da Musica Identity, Logo Generator",
+        "Img": "http://www.moma.org/collection_images/resized/500/w500h420/CRI_215500.jpg",
+        "MoMA Number": 377.2011
+    },
+    {
+        "Artist": "Kiki Smith ",
+        "Floor": "3F",
+        "Department": "Prints and Illustrated Books",
+        "Name": "The Falls III",
+        "Img": "http://www.moma.org/collection_images/resized/689/w500h420/CRI_312689.jpg",
+        "MoMA Number": 635.2014
+    },
+    {
+        "Artist": "Alfredo Jaar",
+        "Floor": "2F",
+        "Department": "Media and Performance Art",
+        "Name": "Lament of the Images",
+        "Img": "http://www.moma.org/collection_images/resized/220/w500h420/CRI_196220.jpg",
+        "MoMA Number": 390.201
+    },
+    {
+        "Artist": "Paul Cézanne ",
+        "Floor": "2F",
+        "Department": "Painting and Sculpture",
+        "Name": "Pines and Rocks (Fontainebleau?)",
+        "Img": "http://www.moma.org/collection_images/resized/071/w500h420/CRI_151071.jpg",
+        "MoMA Number": 16.1934
+    },
+    {
+        "Artist": "Vincent van Gogh ",
+        "Floor": "2F",
+        "Department": "Painting and Sculpture",
+        "Name": "The Starry Night",
+        "Img": "http://www.moma.org/collection_images/resized/075/w500h420/CRI_133075.jpg",
+        "MoMA Number": 472.1941
+    },
+    {
+        "Artist": "Kazimir Malevich ",
+        "Floor": "2F",
+        "Department": "Painting and Sculpture",
+        "Name": "Reservist of the First Division",
+        "Img": "http://www.moma.org/collection_images/resized/573/w500h420/CRI_185573.jpg",
+        "MoMA Number": 814.1935
+    },
+    {
+        "Artist": "Cheyney Thompson ",
+        "Floor": "4F",
+        "Department": "Drawings ",
+        "Name": "Untitled (Hemingway)",
+        "Img": "http://www.moma.org/collection_images/resized/708/w500h420/CRI_126708.jpg",
+        "MoMA Number": 3238.2005
+    },
+    {
+        "Artist": "Hank Willis Thomas",
+        "Floor": "4F",
+        "Department": "Photography",
+        "Name": "Jungle Fever, 1987",
+        "Img": "http://www.moma.org/collection_images/resized/903/w500h420/CRI_234903.jpg",
+        "MoMA Number": 72.2011
+    },
+    {
+        "Artist": "Stephen Shore",
+        "Floor": "4F",
+        "Department": "Photography",
+        "Name": "Jerusalem, Israel",
+        "Img": "http://www.moma.org/collection_images/resized/017/w500h420/CRI_268017.jpg",
+        "MoMA Number": 375.2013
+    }
+]
