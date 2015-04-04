@@ -1,4 +1,5 @@
 var ableToClick = true;
+var jsonFile = [];
 
 $(document).ready(function() {
 
@@ -6,21 +7,35 @@ $(document).ready(function() {
 
     $.getJSON('momadata.json').done(function(json){  
     
-        console.log(json);
+        // console.log('wooohoo',json.item.class[0].value);
         $.each(json, function(iterator, item) {     
+            // get the img element from momadata.json file
+            // console.log(iterator);
+            // console.log('AAaaa',item.class[0].value);
+            // console.log('AAaaa',item.class[1].value);
+            // console.log('AAaaa',item.class[2].value);
+            // console.log('AAaaa',item.class[3].value);
+
+            var classVal = item.class[0].value + ' ' + item.class[1].value + ' ' + item.class[2].value + ' ' + item.class[3].value;
+            //$('<img id=' + iterator + ' ' + 'class=' + "mix color-1" +  ' ' + item.class[1].value + ' ' + item.class[2].value + ' ' + item.class[3].value + '>')
             $('<img>')
+                .attr('class', classVal)
                 .attr('src', item.Img)
+                .attr('id', iterator) 
                 .attr('Floor', item.Floor)
                 .attr('Department', item.Department)
                 .attr('Name', item.Name)
                 .attr('MoMA_number', item['MoMA_Number'])
                 .appendTo('#image-holder')
                 .click(clickHandler)
-
-                              // console.log(counter);
-                // console.log(Object.keys(data)); 
+                 
         });
 
+        window.data = json;
+        jsonFile = json;
+
+        console.log('wooohoo',json.value);
+        console.log('window.data -',jsonFile);
     });
 
 
@@ -56,6 +71,7 @@ function clickHandler(){
                 ableToClick = false;
                 alert("That's the last one");
             }
+
 
         var tempImg = document.createElement('img')
         tempImg.setAttribute('src', url)
