@@ -1,4 +1,6 @@
 jQuery(document).ready(function($){
+
+	console.log('main.js init');
 	//open/close lateral filter
 	$('.cd-filter-trigger').on('click', function(){
 		triggerFilter(true);
@@ -70,15 +72,17 @@ jQuery(document).ready(function($){
 	*************************************/
 
 	buttonFilter.init();
-	$('.cd-gallery').mixItUp({
+	$('.cd-gallery ul').mixItUp({
 	    controls: {
 	    	enable: false
 	    },
 	    callbacks: {
-	    	onMixStart: function(){
+	    	onMixStart: function(state){
+	    		console.log('mix start- ',state);
 	    		$('.cd-fail-message').fadeOut(200);
 	    	},
-	      	onMixFail: function(){
+	      	onMixFail: function(state){
+	      		console.log('mix fail - ',state);
 	      		$('.cd-fail-message').fadeIn(200);
 	    	}
 	    }

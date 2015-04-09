@@ -22,7 +22,7 @@
         "class": [
                     {"value": "mix color-1"},
                     {"value": "check1"},
-                    {"value": "radio3"},
+                    {"value": "radio2"},
                     {"value": "option2"}]
                
     },
@@ -35,7 +35,7 @@
         "MoMA Number": 635.2014,
         "class": [
                     {"value": "mix color-1"},
-                    {"value": "check1"},
+                    {"value": "check2"},
                     {"value": "radio3"},
                     {"value": "option2"}]
     },
@@ -48,8 +48,8 @@
         "MoMA Number": 390.201,
         "class": [
                     {"value": "mix color-1"},
-                    {"value": "check1"},
-                    {"value": "radio3"},
+                    {"value": "check3"},
+                    {"value": "radio1"},
                     {"value": "option2"}]
     },
     {
@@ -61,7 +61,7 @@
         "MoMA Number": 16.1934,
         "class": [
                     {"value": "mix color-1"},
-                    {"value": "check1"},
+                    {"value": "check4"},
                     {"value": "radio3"},
                     {"value": "option2"}]
     },
@@ -74,7 +74,7 @@
         "MoMA Number": 472.1941,
         "class": [
                     {"value": "mix color-1"},
-                    {"value": "check1"},
+                    {"value": "check4"},
                     {"value": "radio3"},
                     {"value": "option2"}]
     },
@@ -87,7 +87,7 @@
         "MoMA Number": 814.1935,
         "class": [
                     {"value": "mix color-1"},
-                    {"value": "check1"},
+                    {"value": "check4"},
                     {"value": "radio3"},
                     {"value": "option2"}]
     },
@@ -100,7 +100,7 @@
         "MoMA Number": 3238.2005,
         "class": [
                     {"value": "mix color-1"},
-                    {"value": "check1"},
+                    {"value": "check5"},
                     {"value": "radio3"},
                     {"value": "option2"}]
     },
@@ -113,9 +113,9 @@
         "MoMA Number": 72.2011,
         "class": [
                     {"value": "mix color-1"},
-                    {"value": "check1"},
-                    {"value": "radio3"},
-                    {"value": "option2"}]
+                    {"value": "check6"},
+                    {"value": "radio10"},
+                    {"value": "option1"}]
     },
     {
         "Artist": "Stephen Shore",
@@ -126,8 +126,8 @@
         "MoMA Number": 375.2013,
         "class": [
                     {"value": "mix color-1"},
-                    {"value": "check1"},
-                    {"value": "radio3"},
-                    {"value": "option2"}]
+                    {"value": "check6"},
+                    {"value": "radio2"},
+                    {"value": "option4"}]
     }
 ]
