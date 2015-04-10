@@ -278,10 +278,9 @@ xgallery
     width: 100%;
     width:  200px;
     height: 200px;
-    float: left;
-    margin: 10px 1%;
-
+    margin: 10px auto;
 }
+
 .cd-gallery .cd-fail-message {
   display: none;
   text-align: center;
@@ -291,12 +290,13 @@ xgallery
     padding: 40px 3%;
   }
   .cd-gallery ul {
-    text-align: justify;
+    text-align: center;
   }
   .cd-gallery ul:after {
     content: "";
     display: table;
     clear: both;
+
   }
   .cd-gallery li {
     width: 48%;
