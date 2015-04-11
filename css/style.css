@@ -249,7 +249,7 @@ xtab-filter
   }
   .cd-tab-filter.filter-is-visible {
     /* reduce width when filter is visible */
-    width: 80%;
+    width: 20%;
   }
 }
 
@@ -299,11 +299,11 @@ xgallery
 
   }
   .cd-gallery li {
-    width: 48%;
+    width: 24%;
     margin-bottom: 2em;
   }
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 1004px) {
   .cd-gallery {
     padding: 50px 2%;
     float: right;
@@ -317,12 +317,36 @@ xgallery
   .cd-gallery.filter-is-visible {
     /* reduce width when filter is visible */
     width: 80%;
-  }
+}
+  .Good_1.filter-is-visible{
+    width: 80%;
+
 }
 
   .Good_1{
-    background-color: red;
-}
+    z-index: 2;
+    border: 1 px solid #dcdcdc;
+    background: rgba(54, 25, 25, .5);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .Good_1 img{
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 1em;
+  }
+
+
+  .kicker{
+     display: none;
+    z-index: 99;
+    position: relative;
+    bottom: 0;
+  }
 /* -------------------------------- 
 
 xfilter 
@@ -400,6 +424,7 @@ xfilter
   -o-transform: translateX(0);
   transform: translateX(0);
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  width: 280px;
 }
 .cd-filter.filter-is-visible .cd-close {
   opacity: 1;
@@ -432,7 +457,7 @@ xfilter
 .cd-filter-trigger.filter-is-visible {
   pointer-events: none;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 870px) {
   .cd-filter-trigger {
     width: auto;
     left: 2%;
@@ -452,6 +477,7 @@ xfilter
   }
   .cd-filter-trigger.filter-is-visible, .cd-filter-trigger.filter-is-visible:hover {
     color: #ffffff;
+
   }
 }
 
