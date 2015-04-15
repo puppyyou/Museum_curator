@@ -1,6 +1,8 @@
 var ableToClick = true;
 var jsonFile = [];
 
+var TA = {};
+
 $(document).ready(function() {
 
     console.log('selector.js init');
@@ -21,7 +23,6 @@ $(document).ready(function() {
             //li.addClass(classVal).appendTo('#image-holder');
             li.addClass(classVal);
             $('.cd-gallery').children('ul').append(li);
-            
             $('<img>')
                 .attr('src', item.Img)
                 .attr('id', iterator) 
@@ -30,58 +31,95 @@ $(document).ready(function() {
                 .attr('Name', item.Name)
                 .attr('MoMA_number', item['MoMA_Number'])
                 .appendTo(li)
-                .click(clickHandler)
-            
+                .click(clickHandler)          
                 console.log('Class.data -',classVal);
-        });
-
-        
+        });        
+    
     });
-
 
     $('.kicker').click(function() {
         console.log('kicker');
-        ableToClick = true;
-        $('.Good_1 img').remove();
-        $("#reset_button").addClass("kicker");
-        
-        console.log("true");
+       $('.Good_1 img').remove();
+       $("#reset_button").addClass("kicker");
+       TA = {};
     });
-
 });
+
 
 function clickHandler(){
 
-   if (ableToClick) {
+    if(Object.keys(TA).length < 5){
 
         // assign ID to image
         // click img : THIS
         var url = $(this).attr('src');
+        var id = $(this).attr('id');
+        
         var totalArray = $(".Good_1").children();
         var numImages;
-        for (var i = 0; i < totalArray.length; i++) {
-            if (totalArray[i].src == url) {                               
-                return;
-            }
+
+        if ($(this)[0].id in TA) {
+         console.log("returning",$(this)[0].id)
+         console.log("TAA", {});
+            return;
+              console.log("clicked");
+        };
+
+
+        console.log("TA length__",Object.keys(TA).length);
+        
+        TA[$(this)[0].id] = $(this)[0];
+        console.log("totalArray length", totalArray.length);
+        console.log("TA", TA);
+        ableToClick = true;
+
+
+        var tempImg = document.createElement('img');
+        tempImg.setAttribute('src', url);
+        tempImg.setAttribute('id', id);
+
+        $(tempImg).click(imageClicked);
+        // append img to div .Good_1
+        $('.Good_1').append(tempImg);
+
+    }
+
+    else{
+        console.log("woof");
+        ableToClick = false;
+        // alert("That's the last one");
+        $(".kicker").removeClass("kicker");
+        // return;
         }
-        +totalArray;
-        console.log("totalArray:", totalArray);  
+
+
+        /*+totalArray;
 
             if (totalArray.length >= 5) {
                 console.log("woof");
-                //$('img').off('click');
                 ableToClick = false;
                 // alert("That's the last one");
                 $(".kicker").removeClass("kicker");
                
         //remove class from CSS :  .hidden {display: none;}
+            }*/
+
+        function imageClicked(){
+
+            $(this).remove();
+
+            delete TA[$(this)[0].id];
+
+            console.log("TA", TA);
+
+            // totalArray.splice(-1,1);  //totalArray.splice(index, howmany);
+            
+
+            /*console.log("totalArray", totalArray);
+            console.log("totalArray after", totalArray.length);
+            console.log("done");*/
+            //console.log("totalArray length before",totalArray.length);
+            // totalArray = totalArray - 1;
+            // console.log("totalArray length after",totalArray.length);
             }
-
-
-        var tempImg = document.createElement('img')
-        tempImg.setAttribute('src', url)
-        // append img to div .Good_1
-        $('.Good_1').append(tempImg);
-    }
-
 }
