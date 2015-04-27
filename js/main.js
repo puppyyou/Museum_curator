@@ -3,16 +3,29 @@ jQuery(document).ready(function($){
 	console.log('main.js init');
 	//open/close lateral filter
 	$('.cd-filter-trigger').on('click', function(){
-		triggerFilter(true);
+      	triggerFilter(true);
+      	console.log("Filter clicked")
+      	 document.getElementById("openTag").style.opacity = "0";
+      	 $("#openTag").css("display","none");
+      	 $("#popup").css("display","none");
+
+
+      	// removeAttr("#openTag");
+
 	});
 	$('.cd-filter .cd-close').on('click', function(){
 		triggerFilter(false);
+		console.log("Filter closed")
+		 document.getElementById("openTag").style.opacity = "100";
+		 $("#openTag").css("display","block");
+		 $("#popup").css("display","inline-block");
 	});
 
 	function triggerFilter($bool) {
 		var elementsToTrigger = $([$('.cd-filter-trigger'), $('.cd-filter'), $('.cd-tab-filter'), $('.cd-gallery')]);
 		elementsToTrigger.each(function(){
 			$(this).toggleClass('filter-is-visible', $bool);
+
 		});
 	}
 
@@ -85,6 +98,7 @@ jQuery(document).ready(function($){
 	      		console.log('mix fail - ',state);
 	      		$('.cd-fail-message').fadeIn(200);
 	    	}
+
 	    }
 	});
 

@@ -510,6 +510,7 @@
 					if(!self.controls.toggleFilterButtons){
 						if(!$button.hasClass(self.controls.activeClass)){
 							$(self.selectors.filter).removeClass(self.controls.activeClass);
+							console.log('Fliter button: ON');
 							trackClick($button, type);
 							self.filter(filter);
 						}

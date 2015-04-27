@@ -1,24 +1,47 @@
 <!doctype html>
-
 <html lang="en" class="no-js">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<title>A Day at the Museum</title>
 	<meta charset="UTF-8">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style_style.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-    
-
-	<!-- <title> Content Filters | CodyHouse</title> -->
+	<link rel="stylesheet" href="css/style_style1.css"> <!-- Resource style-->
+	<!-- <link rel="stylesheet" href="css/orginal.css"> --> <!-- Resource style -->
+	<link rel="stylesheet" href="css/popup.css"type="text/css" /> <!-- CSS for popup window -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
 </head>
+
 <body>
-	<header class="cd-header">
+
+	<!--POPUP-->  
+	<body   onload="popup('popUpDiv')"><!--  have window popup at the begining -->
+    <div id="blanket" style="display:none;"></div>
+	<div id="popUpDiv" style="display:none; right: 100px;">
+    	
+    	<!-- Click to Close CSS Pop Up -->
+    			<br>
+	    		<p id="WindowTitle">Hey! Want to create your personal museum memory? </p> <br><br>
+    		<div id="windowtext">
+	    		<p class="thick">Start</p> <p> By picking four art works <br><br>
+	    		<p class="thick">Save</p> <p> Print it out in the musuem or email it to yourself <br><br>
+	    		<p class="thick">Memory</p> <p> Enjoy the personal souvenir!
+	    		</p>
+	    	</div>	 
+	    	<div id="closeTag"><a href="/" onclick="popup('popUpDiv')"><p>[ START ]</p></a> 
+    	</div>   	
+     </div>	
+ </div>
+</div>
+   <!-- / POPUP--> 
+   	<header class="cd-header">
+
 		 <h1>
-		 <img src="image/Header-03.png" alt="Header">
+		 <img id="BKLogo"src="image/headerr-02.jpg" alt="Header">
          </h1>
+
 	</header>
 
 	<main class="cd-main-content">
@@ -29,36 +52,48 @@
 						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
 					</li> 
 					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
-					<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Color 1</a></li>
-					<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Color 2</a></li>
+					<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Popular this Week</a></li>
+					<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">The classic</a>
+					</li>
 				</ul> <!-- cd-filters -->
 			</div> <!-- cd-tab-filter -->
+				<div id="openTag">
+					<a href="#" id="popup" onclick="popup('popUpDiv')" > What is this about ? </a>
+				<!-- Click to Open CSS Pop Up --> 
+			   </div>
 		</div> <!-- cd-tab-filter-wrapper -->
 
-		<section class="cd-gallery">
-			<ul>
-            <!-- <li class="mix color-1 check1 radio2 option3"><img src="image/img-1.jpg" alt="Image 1"></li> -->
-            </ul>
-						<li class="gap"></li>
-						<div id="selection-wrapper">
-							<div class="Good_1 Good">
-							<button class="hidden kicker" id="reset_button">Try it again</button>
-						    </div>
-						</div>
+		
+			<div class="cd-gallery">
+				<ul class="imageDisplay">
+	      
+	            </ul> 
+	    	<li class="gap"></li>       
+	        </div> <!-- cd-gallery -->
+	        
+			<div id="selection-wrapper">
+				<div id="selected-image-holder" class="Good_1 Good">
+								<button class="hidden kicker" id="save_button">Try it again</button>
+								<button class="hidden kicker" id="save_button">Save</button>
+			    </div>
+			</div>
+							<li class="gap"></li>		
 
-						<li class="gap"></li>
-
-					
-			<!-- <div class="cd-fail-message">No results found</div> -->
-		</section> <!-- cd-gallery -->
-
-		<div class="cd-filter">s
+		<div class="cd-filter">
 			<form>
 				<div class="cd-filter-block">
-					<h4>Search</h4>
+					<h4>Floor</h4>
 					
 					<div class="cd-filter-content">
-						<input type="search" placeholder="Try color-1...">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Choose a floor</option>
+								<option value=".option1">First Floor</option>
+								<option value=".option2">Second Floor</option>
+								<option value=".option3">Third Floor</option>
+								<option value=".option4">Forth Floor</option>
+							</select>
+						</div> <!-- cd-select -->
 					</div> <!-- cd-filter-content -->
 				</div> <!-- cd-filter-block -->
 
@@ -66,41 +101,46 @@
 					<h4>Departments</h4>
 
 					<ul class="cd-filter-content cd-filters list">
+
 						<li> 
-							<input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
-							<h5><p>Architecture and Design</h5>
-			    			<label class="checkbox-label" for="checkbox1"></label>
+							<input class="filter" data-filter=".check1" type="checkbox"id="checkbox1" >
+			    			<label class="checkbox-label" for="checkbox1"><li><h5>Architecture and Design</h5></li></label>
 						</li>
 
 						<li>
 							<input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
-							<label class="checkbox-label" for="checkbox2">Option 2</label>
+							<label class="checkbox-label" for="checkbox2"> <li><h5>Painting and Sculpture</h5></li></label>
 						</li>
 
 						<li>
 							<input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
-							<label class="checkbox-label" for="checkbox3">Option 3</label>
+							<label class="checkbox-label" for="checkbox3"><li><h5>Media and Performance Art</h5></li></label>
+							
+						</li>
+						
+						<li>	
+							<input class="filter" data-filter=".check4" type="checkbox" id="checkbox4">
+							<label class="checkbox-label" for="checkbox4"><li><h5>Photography</h5></li></label>
+							
 						</li>
 					</ul> <!-- cd-filter-content -->
 				</div> <!-- cd-filter-block -->
 
-				<div class="cd-filter-block">
-					<h4>Select</h4>
+			<!-- 	////////////////// search function //////////////////-->
+				<!-- <div class="cd-filter-block">
 					
+					<h4>Search</h4>
 					<div class="cd-filter-content">
-						<div class="cd-select cd-filters">
-							<select class="filter" name="selectThis" id="selectThis">
-								<option value="">Choose an option</option>
-								<option value=".option1">Option 1</option>
-								<option value=".option2">Option 2</option>
-								<option value=".option3">Option 3</option>
-								<option value=".option4">Option 4</option>
-							</select>
-						</div> <!-- cd-select -->
-					</div> <!-- cd-filter-content -->
-				</div> <!-- cd-filter-block -->
+						<input type="search" placeholder="Try Artist name...">
+					</div> 
+				</div>  -->
+			<!-- 	////////////////// search function //////////////////  -->	
 
-				<div class="cd-filter-block">
+ 			
+
+ 			<!-- 	////////////////// another filter //////////////////  -->	
+
+<!--		<div class="cd-filter-block">
 					<h4>Radio buttons</h4>
 
 					<ul class="cd-filter-content cd-filters list">
@@ -118,20 +158,23 @@
 							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
 							<label class="radio-label" for="radio3">Choice 3</label>
 						</li>
-					</ul> <!-- cd-filter-content -->
-				</div> <!-- cd-filter-block -->
-			</form>
+					</ul> 
+			</div>  -->
+			<!-- 	////////////////// another filter //////////////////  -->	
 
+
+			</form>
 			<a href="#0" class="cd-close">Close</a>
 		</div> <!-- cd-filter -->
-
 		<a href="#0" class="cd-filter-trigger">Filters</a>
 
 	</main> <!-- cd-main-content -->
 <script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mixitup.min.js"></script>
 <script src="js/mixitup.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
 <script src="js/selector.js"></script> 
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/css-pop.js"></script>  <!-- popup window -->
 
 </body>
 </html>
