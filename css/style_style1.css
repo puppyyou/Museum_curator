@@ -51,9 +51,17 @@ h1 img{
 }
 
 .ui-checkbox-on {
-  z-index: 99;
+  /*z-index: 99;*/
   /*background: url("../image/cd-icon-arrow.svg") no-repeat center center;*/
-  background-color: #00ffec;
+
+  /* width: 16px; */
+  /* height: 20px; */
+  background-color: #5D7FA1;
+}
+
+.ui-checkbox-on {
+
+
 }
 
 #imageText{

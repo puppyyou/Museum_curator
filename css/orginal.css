@@ -740,7 +740,7 @@ xcustom form elements
   /* check mark style for check boxes */
   width: 16px;
   height: 16px;
-  background: url("../img/cd-icon-check.svg") no-repeat center center;
+  background: url("../image/cd-icon-check.svg") no-repeat center center;
 }
 .cd-filter-block .radio-label::before,
 .cd-filter-block .radio-label::after {
